@@ -1,10 +1,3 @@
-try:
-    with open("arquivo_crud.txt", "r") as arquivo:
-        conteudo = arquivo.read()
-        print("Dados recuperados")
-except FileNotFoundError:
-    print("O arquivo não foi encontrado.")
-
 alunos = []
 
 while True:
@@ -80,11 +73,6 @@ while True:
             print("Aluno não encontrado.")
 
     elif opcao == "0":
-        # Gravar os valores da lista alunos no arquivo
-        with open("arquivo_crud.txt", "w") as arquivo:
-            for aluno in alunos:
-                arquivo.write(f"{aluno[0]},{aluno[1]},{aluno[2]}\n")
-        print("Dados salvos no arquivo.")
         break
 
     else:
